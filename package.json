@@ -1,11 +1,11 @@
 {
-  "name": "assemble",
+  "name": "mentorme",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
     "set-permissions": "npx react-native setup-ios-permissions && npx pod-install",
-    "apk": "cd android &&./gradlew clean && ./gradlew assembleRelease && cd ..",
+    "apk": "cd android &&./gradlew clean && ./gradlew mentormeRelease && cd ..",
     "bundle": "cd android && ./gradlew clean && ./gradlew bundleRelease && cd ..",
     "ios": "react-native run-ios",
     "lint": "eslint .",

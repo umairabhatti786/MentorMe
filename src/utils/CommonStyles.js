@@ -21,33 +21,6 @@ const commonStyles = ScaledSheet.create({
     flexDirection: "row",
   },
 
-  padding: {
-    paddingHorizontal: 20,
-  },
-  row: {
-    flexDirection: "row",
-  },
-  rowJustify: {
-    justifyContent: "space-between",
-    alignItems: "center",
-    flexDirection: "row",
-  },
-
-  IosPadding: {
-    flex: 1,
-    paddingTop: Platform.OS == "ios" ? verticalScale(40) : 5,
-    backgroundColor: colors.white,
-  },
-
-  rowAround: {
-    justifyContent: "space-around",
-    alignItems: "center",
-    flexDirection: "row",
-  },
-  iconContainer: {
-    width: moderateScale(25),
-    height: verticalScale(25),
-  },
   img: {
     width: "100%",
     height: "100%",
@@ -64,13 +37,6 @@ const commonStyles = ScaledSheet.create({
   main: {
     backgroundColor: colors.white,
     flex: 1,
-  },
-
-  IosPadding: {
-    flex: 1,
-    paddingTop: Platform.OS == "ios" ? verticalScale(40) : 5,
-    paddingHorizontal: moderateScale(15),
-    backgroundColor: colors.white,
   },
 });
 

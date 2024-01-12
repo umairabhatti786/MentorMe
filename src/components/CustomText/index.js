@@ -2,14 +2,15 @@ import { Text } from 'react-native'
 import { colors } from '../../utils/colors'
 
 
-const CustomText = ({ color, size, fontFam, text, style, lineHeight }) => {
+const CustomText = ({ color, size, fontFam, text, style,fontWeight, lineHeight }) => {
     return (
         <Text
             style={[
                 {
-                    color: color || colors.primary,
-                    fontSize: size || 12,
-                    fontFamily: fontFam || "SF-Compact-Text-Regular",
+                    color: color || colors.black,
+                    fontSize: size || 22,
+                    fontFamily: fontFam || "Urbanist-Regular",
+                    fontWeight: fontWeight ||'400'
                 }, style
             ]}
         >

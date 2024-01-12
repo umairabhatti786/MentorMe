@@ -55,6 +55,7 @@
     "react-native-size-matters": "^0.4.2",
     "react-native-styled-components": "^2.1.0",
     "react-native-svg": "^14.0.0",
+    "react-native-swiper": "^1.6.0",
     "react-native-vector-icons": "^10.0.3",
     "react-redux": "^9.0.4",
     "redux": "^5.0.0"

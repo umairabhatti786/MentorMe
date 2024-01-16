@@ -70,7 +70,7 @@
 	<key>NSRemoteNotificationUsageDescription</key>
 	<string>Stay informed about your pets' activities and events with push notifications from Pawspact.</string>
 	<key>NSCalendarsUsageDescription</key>
-<string>This app requires access to the calendar</string>
+	<string>This app requires access to the calendar</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>SF-Compact-Display-Black.ttf</string>
@@ -111,6 +111,10 @@
 		<string>SF-Compact-Text-Ultralight.ttf</string>
 		<string>SF-Compact-Text-UltralightItalic.ttf</string>
 		<string>SF-Compact.ttf</string>
+		<string>Urbanist-Light.ttf</string>
+		<string>Urbanist-Medium.ttf</string>
+		<string>Urbanist-Regular.ttf</string>
+		<string>Urbanist-SemiBold.ttf</string>
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>

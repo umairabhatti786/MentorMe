@@ -17,4 +17,7 @@ export const images = {
   favorite: require("./favorite.png"),
   cross: require("./cross.png"),
   star: require("./star.png"),
+  onboarding: require("./onboarding.png"),
+  onboarding1: require("./onboarding1.png"),
+  onboarding2: require("./onboarding2.png"),
 };

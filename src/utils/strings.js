@@ -7,4 +7,8 @@ export default {
   morning: "Good Morning 👋",
   shandontolver: "Shandontoliver",
   aimatch: "AI Matching",
+  android: "android",
+  Onboarding_screen: "Onboarding Screen",
+  next: "Next",
+  tabs: "Tabs",
 };

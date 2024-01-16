@@ -1,8 +1,12 @@
-import { Pressable, Text, TouchableOpacity, View,ActivityIndicator } from "react-native";
+import {
+  Pressable,
+  Text,
+  TouchableOpacity,
+  View,
+  ActivityIndicator,
+} from "react-native";
 import { colors } from "../../utils/colors";
 import CustomText from "../CustomText";
-
-
 
 const CustomButton = ({
   text,
@@ -20,6 +24,7 @@ const CustomButton = ({
   notRequiredShadow,
   disable,
   isLoading,
+  fontWeight,
 }) => {
   return (
     <TouchableOpacity
@@ -30,30 +35,30 @@ const CustomButton = ({
         ...style,
         width: width || "100%",
         height: height || 50,
-        backgroundColor: bgColor || colors.primary,
+        backgroundColor: bgColor || colors.secondary,
         justifyContent: "center",
         alignItems: "center",
-        borderRadius: borderRadius || 12,
+        borderRadius: borderRadius || 40,
         elevation: elevation,
         borderWidth: 2,
-        borderColor: borderColor || colors.primary,
+        borderColor: borderColor || colors.secondary,
         shadowColor: "#000",
         shadowOffset: { width: 3, height: 7 },
-        shadowOpacity: notRequiredShadow ? 0 : 0.3,
+        shadowOpacity: notRequiredShadow ? 0 : 0.2,
         shadowRadius: 5,
       }}
     >
       {isLoading ? (
         <>
-              <ActivityIndicator size={"large"} color={colors.white} />
-
+          <ActivityIndicator size={"large"} color={colors.white} />
         </>
       ) : (
         <CustomText
           text={text}
           color={textColor || colors.white}
           size={size || disable ? 14 : 17}
-          fontFam={fontFam || "SF-Compact-Text-Regular"}
+          fontFam={fontFam || "Urbanist-Regular"}
+          fontWeight={fontWeight}
         />
       )}
     </TouchableOpacity>

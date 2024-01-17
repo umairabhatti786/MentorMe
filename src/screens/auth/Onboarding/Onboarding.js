@@ -16,7 +16,7 @@ const Onboarding = () => {
     if (index <= 1) {
       setIndex((prevCount) => prevCount + 1);
     } else {
-      navigation.replace(strings.tabs);
+      navigation.replace(strings.signup);
     }
   };
   return (

@@ -25,6 +25,7 @@ const CustomButton = ({
   disable,
   isLoading,
   fontWeight,
+  shadowColor
 }) => {
   return (
     <TouchableOpacity
@@ -34,7 +35,7 @@ const CustomButton = ({
       style={{
         ...style,
         width: width || "100%",
-        height: height || 50,
+        height: height || 55,
         backgroundColor: bgColor || colors.secondary,
         justifyContent: "center",
         alignItems: "center",
@@ -42,7 +43,7 @@ const CustomButton = ({
         elevation: elevation,
         borderWidth: 2,
         borderColor: borderColor || colors.secondary,
-        shadowColor: "#000",
+        shadowColor:shadowColor ||  colors.secondary,
         shadowOffset: { width: 3, height: 7 },
         shadowOpacity: notRequiredShadow ? 0 : 0.2,
         shadowRadius: 5,
@@ -56,7 +57,7 @@ const CustomButton = ({
         <CustomText
           text={text}
           color={textColor || colors.white}
-          size={size || disable ? 14 : 17}
+          size={17}
           fontFam={fontFam || "Urbanist-Regular"}
           fontWeight={fontWeight}
         />

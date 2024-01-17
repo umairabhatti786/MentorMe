@@ -1,4 +1,19 @@
 export const images = {
+
+  back: require("../icons/back.png"),
+  logo: require("./logo.png"),
+  tick: require("../icons/tick.png"),
+  email: require("../icons/email.png"),
+  lock: require("../icons/lock.png"),
+  referral: require("../icons/referral.png"),
+  eyeoff: require("../icons/eye-off.png"),
+  apple: require("../icons/apple.png"),
+  google: require("../icons/google.png"),
+  facebook: require("../icons/facebook.png"),
+
+
+
+
   home: require("./Home.png"),
   subscription: require("./subscription.png"),
   match: require("./Heart.png"),

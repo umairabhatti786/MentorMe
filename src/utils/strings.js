@@ -11,4 +11,6 @@ export default {
   Onboarding_screen: "Onboarding Screen",
   next: "Next",
   tabs: "Tabs",
+  signup:"Signup",
+  login:"Login"
 };

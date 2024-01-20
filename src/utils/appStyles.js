@@ -13,8 +13,12 @@ export const appStyles = StyleSheet.create({
     row:{
         flexDirection:"row",
         alignItems:"center",
-   
 
+    },
+    justifyRow:{
+        flexDirection:"row",
+        alignItems:"center",
+        justifyContent:"space-between"
 
     }
 

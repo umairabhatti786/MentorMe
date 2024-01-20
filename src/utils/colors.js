@@ -10,5 +10,6 @@ export const colors = {
   offWhite: "#f9feff",
   black: "#212121",
   primaryblur: "#aa856f",
-  halfWhite:"#EEEEEE"
+  halfWhite:"#EEEEEE",
+  red:"#F75555",
 };

@@ -12,5 +12,7 @@ export default {
   next: "Next",
   tabs: "Tabs",
   signup:"Signup",
+  setting:"Setting",
+
   login:"Login"
 };

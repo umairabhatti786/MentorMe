@@ -25,7 +25,8 @@ const CustomButton = ({
   disable,
   isLoading,
   fontWeight,
-  shadowColor
+  shadowColor,
+  fontSize
 }) => {
   return (
     <TouchableOpacity
@@ -57,7 +58,7 @@ const CustomButton = ({
         <CustomText
           text={text}
           color={textColor || colors.white}
-          size={17}
+          size={fontSize|| 17}
           fontFam={fontFam || "Urbanist-Regular"}
           fontWeight={fontWeight}
         />

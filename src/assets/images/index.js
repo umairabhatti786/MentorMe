@@ -10,6 +10,35 @@ export const images = {
   apple: require("../icons/apple.png"),
   google: require("../icons/google.png"),
   facebook: require("../icons/facebook.png"),
+  
+  logout: require("../icons/logout.png"),
+  group: require("../icons/group.png"),
+  darkmode: require("../icons/dark-mode.png"),
+  setting: require("../icons/setting.png"),
+  squreinfo: require("../icons/squre-info.png"),
+  next: require("../icons/next.png"),
+  search: require("../icons/search.png"),
+  info: require("../icons/info.png"),
+
+
+
+  notivication: require("../icons/notivication.png"),
+  personal: require("../icons/personal.png"),
+  privacy: require("../icons/privacy.png"),
+  security: require("../icons/security.png"),
+  language: require("../icons/language.png"),
+  discovery: require("../icons/discovery.png"),
+  datastorage: require("../icons/data-storage.png"),
+  feebback: require("../icons/feebback.png"),
+  about: require("../icons/about.png"),
+  back: require("../icons/back.png"),
+
+
+
+
+
+
+
 
 
 
@@ -26,6 +55,8 @@ export const images = {
   boldProfile: require("./CProfile.png"),
   avatar: require("./Avatar.png"),
   dummy: require("./dummyimage.png"),
+  premiumback: require("./premium-back.png"),
+
   dummy1: require("./dummyimage1.png"),
   filter: require("./Filter.png"),
   change: require("./change.png"),

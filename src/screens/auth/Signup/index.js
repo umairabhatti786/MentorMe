@@ -25,6 +25,7 @@ const Signup = ({navigation}) => {
         <Spacer height={Platform.OS == "ios" ? 20 : 10} />
         <TouchableOpacity
           activeOpacity={0.6}
+          onPress={()=>navigation.goBack()}
           style={{ width: 35, height: 35, justifyContent: "center" }}
         >
           <Image
@@ -78,7 +79,9 @@ const Signup = ({navigation}) => {
             <CustomText text={"Remember me"} size={14} fontWeight={"500"} />
           </View>
 
-          <CustomButton fontWeight={"700"} text={"Sign up"} />
+          <CustomButton
+          onPress={()=>navigation.navigate("Login")}
+           fontWeight={"700"} text={"Sign up"} />
 
           <View
             style={{

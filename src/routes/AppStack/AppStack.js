@@ -5,6 +5,8 @@ import Home from "../../screens/main/Home";
 import Tabs from "../BottomTabs/Tabs";
 import Onboarding from "../../screens/auth/Onboarding/Onboarding";
 import strings from "../../utils/strings";
+import Signup from "../../screens/auth/Signup";
+import Setting from "../../screens/main/Setting";
 
 const AppStack = () => {
   const Stack = createStackNavigator();
@@ -13,8 +15,13 @@ const AppStack = () => {
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name={strings.Onboarding_screen} component={Onboarding} />
       <Stack.Screen name={strings.tabs} component={Tabs} />
-      <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name={strings.login} component={Login} />
+      <Stack.Screen name={strings.signup} component={Signup} />
+      <Stack.Screen name={strings.setting} component={Setting} />
+
+
       <Stack.Screen name="Home" component={Home} />
+
     </Stack.Navigator>
   );
 };

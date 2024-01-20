@@ -18,7 +18,7 @@ import CustomButton from "../../../components/CustomButton";
 import { colors } from "../../../utils/colors";
 import AuthBotton from "../../../components/AuthBotton";
 
-const Login = ({ navigation }) => {
+const Signup = ({navigation}) => {
   return (
     <SafeAreaView style={appStyles.main}>
       <View style={{ flex: 1, paddingHorizontal: 20 }}>
@@ -26,7 +26,6 @@ const Login = ({ navigation }) => {
         <TouchableOpacity
           activeOpacity={0.6}
           onPress={()=>navigation.goBack()}
-
           style={{ width: 35, height: 35, justifyContent: "center" }}
         >
           <Image
@@ -59,19 +58,15 @@ const Login = ({ navigation }) => {
             imgWidth={18}
           />
           <CustomInput
+            leftImage={images.referral}
+            placeholder={"Referral Code"}
+          />
+
+          <CustomInput
             leftImage={images.lock}
             placeholder={"Password"}
             rightImage={images.eyeoff}
           />
-          <View style={{ alignSelf: "flex-end",marginVertical:25 }}>
-            <CustomText
-              text={"Forgot the password?"}
-              color={colors.secondary}
-              size={13}
-              fontWeight={"500"}
-            />
-          </View>
-
           <View
             style={{
               flexDirection: "row",
@@ -84,10 +79,9 @@ const Login = ({ navigation }) => {
             <CustomText text={"Remember me"} size={14} fontWeight={"500"} />
           </View>
 
-          <CustomButton 
-                    onPress={()=>navigation.navigate("Tabs")}
-
-          fontWeight={"700"} text={"Sign in"} />
+          <CustomButton
+          onPress={()=>navigation.navigate("Login")}
+           fontWeight={"700"} text={"Sign up"} />
 
           <View
             style={{
@@ -134,17 +128,21 @@ const Login = ({ navigation }) => {
               color={colors.grey300}
             />
             <Spacer width={5} />
-            <TouchableOpacity
-              activeOpacity={0.6}
-              style={() => navigation.navigate("Signup")}
+
+            <TouchableOpacity 
+            activeOpacity={0.6}
+            onPress={()=>navigation.navigate("Login")}
             >
-              <CustomText
-                text={"Sign up"}
-                size={14}
-                color={colors.secondary}
-                fontWeight={"500"}
-              />
+            <CustomText
+              text={"Sign in"}
+              size={14}
+              color={colors.secondary}
+              fontWeight={"500"}
+            />
+
             </TouchableOpacity>
+
+           
           </View>
         </View>
       </View>
@@ -152,7 +150,7 @@ const Login = ({ navigation }) => {
   );
 };
 
-export default Login;
+export default Signup;
 
 const styles = StyleSheet.create({
   line: {

@@ -1,5 +1,5 @@
 import { useNavigation } from "@react-navigation/native";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { View, StyleSheet, Image, SafeAreaView } from "react-native";
 import { colors } from "../../../utils/colors";
 import CustomText from "../../../components/CustomText";
@@ -10,14 +10,24 @@ import Swiper from "react-native-swiper";
 import { imagesArray } from "../../../utils/DummyData";
 import ToggleSwitch from "toggle-switch-react-native";
 import { windowHeight, windowWidth } from "../../../utils/Commons";
+import { Modalize } from "react-native-modalize";
+import FilterModal from "./FilterModal";
+import AccountApprovalModal from "./AccountApprovalModal";
 
 const Home = () => {
   const navigation = useNavigation();
   const [isEnabled, setIsEnabled] = useState(true);
   const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
+  const [hideFilterModal,setHideFilterModal]=useState(false)
+  const [approvalModal,setApprovalModal]=useState(false)
+
+  const onCloseModal = () => {
+    setHideFilterModal(!hideFilterModal);
+  };
 
   return (
-    <SafeAreaView style={[styles.container, { paddingTop: 10 }]}>
+    <>
+     <SafeAreaView style={[styles.container, { paddingTop: 10 }]}>
       <View style={{ flex: 1, paddingHorizontal: 15 }}>
         <View style={styles.contentContainer}>
           <View style={styles.imageContainer}>
@@ -36,7 +46,12 @@ const Home = () => {
               />
             </View>
           </View>
-          <TouchableOpacity activeOpacity={0.7}>
+          <TouchableOpacity 
+          onPress={()=>{
+            setHideFilterModal(true)
+
+          }}
+          activeOpacity={0.6}>
             <Image source={images.filter} />
           </TouchableOpacity>
         </View>
@@ -113,7 +128,19 @@ const Home = () => {
           })}
         </Swiper>
       </View>
+
+
     </SafeAreaView>
+    <FilterModal
+    modalVisible={hideFilterModal}
+    onCloseModal={onCloseModal}
+
+    />
+    <AccountApprovalModal
+    modalVisible={approvalModal}
+    />
+    </>
+   
   );
 };
 

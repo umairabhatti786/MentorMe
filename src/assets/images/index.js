@@ -1,5 +1,4 @@
 export const images = {
-
   back: require("../icons/back.png"),
   logo: require("./logo.png"),
   tick: require("../icons/tick.png"),
@@ -10,7 +9,7 @@ export const images = {
   apple: require("../icons/apple.png"),
   google: require("../icons/google.png"),
   facebook: require("../icons/facebook.png"),
-  
+
   logout: require("../icons/logout.png"),
   group: require("../icons/group.png"),
   darkmode: require("../icons/dark-mode.png"),
@@ -19,29 +18,61 @@ export const images = {
   next: require("../icons/next.png"),
   search: require("../icons/search.png"),
   info: require("../icons/info.png"),
-
-
-
+  swap: require("../icons/swap.png"),
+  starIcon: require("../icons/star.png"),
   notivication: require("../icons/notivication.png"),
   personal: require("../icons/personal.png"),
   privacy: require("../icons/privacy.png"),
-  security: require("../icons/security.png"),
+  settingsecurity: require("../icons/setting-security.png"),
   language: require("../icons/language.png"),
   discovery: require("../icons/discovery.png"),
   datastorage: require("../icons/data-storage.png"),
   feebback: require("../icons/feebback.png"),
   about: require("../icons/about.png"),
   back: require("../icons/back.png"),
+  videowhite: require("../icons/video-call-white.png"),
+
+  call: require("../icons/call.png"),
+  videocall: require("../icons/video-call.png"),
+  emoji: require("../icons/emoji.png"),
+  voice: require("../icons/voice.png"),
+  camera: require("../icons/camera.png"),
+  attach: require("../icons/attach.png"),
+  callcancel: require("../icons/call-cancel.png"),
+  cameraleftright: require("../icons/camera-left-right.png"),
+  volume: require("../icons/volume.png"),
+
+  smile: require("../icons/smile-emoji.png"),
+  premium: require("../icons/premium.png"),
+  crown: require("../icons/crown.png"),
+  check: require("../icons/check.png"),
+  heart: require("../icons/heart.png"),
+  sms: require("../icons/sms.png"),
+
+  user1: require("./user1.png"),
+  user2: require("./user2.png"),
+  user3: require("./user3.png"),
+  user4: require("./user4.png"),
+  user5: require("./user5.png"),
+  user6: require("./user6.png"),
+  user7: require("./user7.png"),
+  user8: require("./user8.png"),
+  user9: require("./user9.png"),
+  user10: require("./user10.png"),
+
+  dummyuser1: require("./dummy-user1.png"),
+  dummyuser2: require("./dummy-user2.png"),
+  dummyuser3: require("./dummy-user3.png"),
 
 
+  protect: require("./protect.png"),
 
+  location: require("../icons/location.png"),
 
+  security: require("./security.png"),
 
-
-
-
-
-
+  userback: require("./user-back.png"),
+  usersquare: require("./user-square.png"),
 
   home: require("./Home.png"),
   subscription: require("./subscription.png"),
@@ -66,4 +97,5 @@ export const images = {
   onboarding: require("./onboarding.png"),
   onboarding1: require("./onboarding1.png"),
   onboarding2: require("./onboarding2.png"),
+  
 };

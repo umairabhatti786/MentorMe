@@ -1,32 +1,26 @@
-import "react-native-gesture-handler";
-import { enableLatestRenderer } from "react-native-maps";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import 'react-native-reanimated'
+
 // enableLatestRenderer();
 import { View, Text, LogBox, TouchableOpacity, Image } from "react-native";
 import React from "react";
 import { Provider } from "react-redux";
+import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
 
 import store from "./src/redux/store";
 import RootNavigator from "./src/routes";
 
-// import firebase from '@react-native-firebase/app';
-// import firestore from '@react-native-firebase/firestore';
 LogBox.ignoreLogs(["VirtualizedLists", "Warning:..."]);
 LogBox.ignoreAllLogs();
-// const firebaseConfig = {
-//   apiKey: 'AIzaSyDJQjcJiTpN5RmkK5Z6cv2gHGleDRw-PYY',
-//   authDomain: '',
-//   projectId: 'qatapolt-2023',
-//   storageBucket: '',
-//   messagingSenderId: '',
-//   appId: '1:146031539666:android:a64f70535d2f212c3bc40b',
-//   // databaseURL: '',
-// };
-// firebase.initializeApp(firebaseConfig);
 const App = () => {
   return (
-    <Provider store={store}>
-      <RootNavigator />
-    </Provider>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <Provider store={store}>
+        {/* <BottomSheetModalProvider> */}
+          <RootNavigator />
+        {/* </BottomSheetModalProvider> */}
+      </Provider>
+    </GestureHandlerRootView>
   );
 };
 

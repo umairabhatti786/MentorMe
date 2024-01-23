@@ -4,8 +4,10 @@ import { appStyles } from "../../utils/appStyles";
 import CustomText from "../CustomText";
 import { images } from "../../assets/images";
 import { Spacer } from "../Spacer";
+import { useNavigation } from "@react-navigation/native";
 
-const CustomHeader = ({text,isRight,isBack,onBack}) => {
+const CustomHeader = ({text,isRight,isBack,onBack,isCalling,textSize}) => {
+    const navigation=useNavigation()
   return (
     <View style={{...appStyles.justifyRow,}}>
 
@@ -15,7 +17,7 @@ const CustomHeader = ({text,isRight,isBack,onBack}) => {
                     <>
                       <TouchableOpacity
                       activeOpacity={0.6}
-                      onPress={onBack}
+                      onPress={()=>navigation.goBack()}
                       >
                     <Image
                     resizeMode="contain"
@@ -32,7 +34,7 @@ const CustomHeader = ({text,isRight,isBack,onBack}) => {
         <CustomText
         color={colors.black}
         text={text}
-        size={20}
+        size={ textSize || 25}
         fontWeight={"700"}
         />
 
@@ -41,16 +43,55 @@ const CustomHeader = ({text,isRight,isBack,onBack}) => {
         {
             isRight&&(
                 <View style={appStyles.row}>
+                    {
+                        isCalling?(
+                            <View style={appStyles.row}>
+                                 <TouchableOpacity
+                                 onPress={()=>navigation.navigate("AudioCall")}
+                                 >
+                            <Image
+                            style={{width:22,height:22}}
+                            source={images.call}
+                            
+                            />
+            
+                        </TouchableOpacity>
+                        <Spacer width={20}/>
 
-                <TouchableOpacity>
-                    <Image
-                    style={{width:22,height:22}}
-                    source={images.search}
-                    />
-    
-                </TouchableOpacity>
+                        <TouchableOpacity
+                                                         onPress={()=>navigation.navigate("VideoCall")}
+
+                        >
+                            <Image
+                            style={{width:27,height:27}}
+                            source={images.videocall}
+                            />
+            
+                        </TouchableOpacity>
+                        {/* <Spacer width={5}/> */}
+
+
+                            </View>
+
+                        ):(
+                            <TouchableOpacity
+                            >
+                            <Image
+                            style={{width:22,height:22}}
+                            source={images.search}
+                            />
+            
+                        </TouchableOpacity>
+
+                        )
+                    }
+
+              
                 <Spacer width={20}/>
-                <TouchableOpacity>
+                <TouchableOpacity
+                activeOpacity={0.6}
+                onPress={()=>navigation.navigate("RewindAndBoost")}
+                >
                     <Image
                     style={{width:22,height:22}}
                     source={images.info}

@@ -20,99 +20,102 @@ const Setting = ({ navigation }) => {
   const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
 
   return (
-    <ScrollView
-    contentContainerStyle={appStyles.main}
-    style={appStyles.main}
+    <ScrollView contentContainerStyle={appStyles.main} style={appStyles.main}>
+      <SafeAreaView style={appStyles.main}>
+        <View style={{ flex: 1, padding: 20 }}>
+          <CustomHeader
+            isBack={true}
+            navigation={navigation}
+            text={"Settings"}
+          />
 
-    >
-        <SafeAreaView style={appStyles.main}>
-      <View style={{ flex: 1, padding: 20 }}>
-        <CustomHeader
-          isBack={true}
-          onBack={() => navigation.goBack()}
-          text={"Settings"}
-        />
+          <Spacer height={40} />
 
-        <Spacer height={40} />
+          <HorizontalContainer
+            text={"Personal Information"}
+            height={40}
+            width={40}
+            leftImage={images.personal}
+          />
+          <Spacer height={30} />
 
-        <HorizontalContainer
-          text={"Personal Information"}
-          height={40}
-          width={40}
-          leftImage={images.personal}
-        />
-        <Spacer height={30} />
+          <HorizontalContainer
+            height={40}
+            width={40}
+            text={"Discovery Settings"}
+            leftImage={images.discovery}
+          />
+          <Spacer height={30} />
 
-        <HorizontalContainer
-          height={40}
-          width={40}
-          text={"Discovery Settings"}
-          leftImage={images.discovery}
-        />
-        <Spacer height={30} />
+          <HorizontalContainer
+            onPress={() =>
+              navigation.navigate("AccountApproval")
+            }
+            height={40}
+            width={40}
+            text={"Privacy & Permissions"}
+            leftImage={images.privacy}
+          />
+          <Spacer height={30} />
 
-        <HorizontalContainer
-          height={40}
-          width={40}
-          text={"Privacy & Permissions"}
-          leftImage={images.privacy}
-        />
-        <Spacer height={30} />
+          <HorizontalContainer
+            height={40}
+            width={40}
+            text={"Notification"}
+            leftImage={images.notivication}
+          />
+          <Spacer height={30} />
 
-        <HorizontalContainer
-          height={40}
-          width={40}
-          text={"Notification"}
-          leftImage={images.notivication}
-        />
-        <Spacer height={30} />
+          <HorizontalContainer
+          onPress={() =>
+            navigation.navigate("AccountApprovalSms")
+          }
+            height={40}
+            width={40}
+            text={"Security"}
+            leftImage={images.settingsecurity}
+          />
 
-        <HorizontalContainer
-          height={40}
-          width={40}
-          text={"Security"}
-          leftImage={images.security}
-        />
+          <Spacer height={30} />
 
-        <Spacer height={30} />
+          <HorizontalContainer
+          onPress={() =>
+            navigation.navigate("DeleteAccount")
+          }
+            height={40}
+            width={40}
+            text={"Data & Storage"}
+            leftImage={images.datastorage}
+          />
 
-        <HorizontalContainer
-          height={40}
-          width={40}
-          text={"Data & Storage"}
-          leftImage={images.datastorage}
-        />
+          <Spacer height={30} />
+          <HorizontalContainer
+            onPress={() => navigation.navigate("HelpCenter")}
+            height={40}
+            width={40}
+            text={"Feedback"}
+            leftImage={images.feebback}
+          />
 
-        <Spacer height={30} />
+          <Spacer height={30} />
 
-        <HorizontalContainer
-          height={40}
-          width={40}
-          text={"Feedback"}
-          leftImage={images.feebback}
-        />
+          <HorizontalContainer
+            height={40}
+            width={40}
+            text={"Language"}
+            leftImage={images.language}
+          />
+          <Spacer height={30} />
 
-        <Spacer height={30} />
-
-        <HorizontalContainer
-          height={40}
-          width={40}
-          text={"Language"}
-          leftImage={images.language}
-        />
-        <Spacer height={30} />
-
-        <HorizontalContainer
-          height={40}
-          width={40}
-          text={"About MentorConnect"}
-          leftImage={images.about}
-        />
-      </View>
-    </SafeAreaView>
-
+          <HorizontalContainer
+            height={40}
+            width={40}
+            text={"About MentorConnect"}
+            leftImage={images.about}
+          />
+        </View>
+      </SafeAreaView>
     </ScrollView>
-    
   );
 };
 

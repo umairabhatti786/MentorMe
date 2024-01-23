@@ -20,7 +20,7 @@ const Tab = createBottomTabNavigator();
 function Tabs() {
   return (
     <Tab.Navigator   screenOptions={{
-        tabBarStyle: { backgroundColor:colors.white },
+        tabBarStyle: { backgroundColor:colors.white,borderTopWidth:-1,},
         tabBarLabelStyle:{lineHeight:18,fontWeight:'500',}
       }}>
       <Tab.Screen
@@ -32,6 +32,7 @@ function Tabs() {
       tabBarIcon: ({ color,focused }) =>  <Image  source={focused ? images.boldHome : images.home} />,
           tabBarActiveTintColor: colors.secondary,
           tabBarInactiveTintColor: colors.grey,
+
         }}
       />
    <Tab.Screen

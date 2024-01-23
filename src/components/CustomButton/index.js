@@ -26,7 +26,8 @@ const CustomButton = ({
   isLoading,
   fontWeight,
   shadowColor,
-  fontSize
+  fontSize,
+  borderWidth
 }) => {
   return (
     <TouchableOpacity
@@ -42,7 +43,7 @@ const CustomButton = ({
         alignItems: "center",
         borderRadius: borderRadius || 40,
         elevation: elevation,
-        borderWidth: 2,
+        borderWidth:borderWidth || 2,
         borderColor: borderColor || colors.secondary,
         shadowColor:shadowColor ||  colors.secondary,
         shadowOffset: { width: 3, height: 7 },

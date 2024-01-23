@@ -25,9 +25,9 @@ const VideoCall = ({ navigation }) => {
     <View
       style={{
         flex: 1,
-        backgroundColor: colors.secondary,
+        // backgroundColor: colors.primary,
       }}>
-      <StatusBar barStyle={"light-content"} backgroundColor={colors.white} />
+      <StatusBar barStyle={"light-content"} backgroundColor={colors.black} />
       <ImageBackground
         style={{ width: "100%", height: "100%" }}
         source={images.userback}>

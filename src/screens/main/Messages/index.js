@@ -2,6 +2,7 @@ import {
   FlatList,
   Image,
   ImageBackground,
+  Platform,
   SafeAreaView,
   StyleSheet,
   Text,
@@ -86,7 +87,7 @@ const Messages = ({ navigation, route }) => {
 
         <Spacer height={10} />
 
-        <View style={{ height: "89%" }}>
+        <View style={{ height: Platform.OS=="ios"? "89%":"88%" }}>
           <FlatList
             data={chatList}
             showsHorizontalScrollIndicator={false}
@@ -97,6 +98,7 @@ const Messages = ({ navigation, route }) => {
         </View>
 
         <MessageSender />
+
       </View>
     </SafeAreaView>
   );

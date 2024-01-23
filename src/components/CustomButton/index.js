@@ -42,7 +42,7 @@ const CustomButton = ({
         justifyContent: "center",
         alignItems: "center",
         borderRadius: borderRadius || 40,
-        elevation: elevation,
+        elevation: notRequiredShadow ?0:5,
         borderWidth:borderWidth || 2,
         borderColor: borderColor || colors.secondary,
         shadowColor:shadowColor ||  colors.secondary,

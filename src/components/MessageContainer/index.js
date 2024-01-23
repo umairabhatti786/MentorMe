@@ -61,14 +61,14 @@ const styles = StyleSheet.create({
     },
     rightText:{
         color:colors.white,
-        fontFamily:SFCompact.bold,
-        fontWeight:"500",
+        fontFamily:SFCompact.regular,
+        fontWeight:"400",
         fontSize:20,
-        lineHeight:30
+        lineHeight:27
     },
     rightTime:{
         color:"#E0E0E0",
-        fontFamily:SFCompact.medium,
+        fontFamily:SFCompact.regular,
         fontSize:13,
         textAlign:"right",
         marginTop:-10
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     },
     leftTime:{
         color:"#9E9E9E",
-        fontFamily:SFCompact.medium,
+        fontFamily:SFCompact.regular,
         fontSize:13,
         textAlign:"right",
         marginTop:-10
@@ -84,11 +84,10 @@ const styles = StyleSheet.create({
     },
     leftText:{
         color:colors.black,
-        fontFamily:SFCompact.medium,
-        fontSize:18,
+        fontFamily:SFCompact.regular,
         fontWeight:"400",
-        fontSize:20,
-        lineHeight:30
+        fontSize:18,
+        lineHeight:27
     }
 
     

@@ -28,7 +28,7 @@ const AudioCall = ({ navigation }) => {
         backgroundColor: colors.secondary,
         paddingTop: Platform.OS == "ios" ? 50 : -50,
       }}>
-      <StatusBar barStyle={"light-content"} backgroundColor={colors.white} />
+      <StatusBar barStyle={"light-content"} backgroundColor={colors.black} />
       <View style={{ padding: 20, flex: 1 }}>
         <TouchableOpacity
           activeOpacity={0.6}

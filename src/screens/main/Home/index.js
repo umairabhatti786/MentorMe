@@ -19,7 +19,7 @@ const Home = () => {
   const [isEnabled, setIsEnabled] = useState(true);
   const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
   const [hideFilterModal,setHideFilterModal]=useState(false)
-  const [approvalModal,setApprovalModal]=useState(false)
+  const [approvalModal,setApprovalModal]=useState(true)
 
   const onCloseModal = () => {
     setHideFilterModal(!hideFilterModal);

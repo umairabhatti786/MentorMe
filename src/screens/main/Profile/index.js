@@ -41,6 +41,8 @@ const Profile = ({navigation}) => {
 
         <Spacer height={10} />
         <PremiumCard />
+        <Spacer height={20} />
+
         <HorizontalContainer
         onPress={()=>navigation.navigate("Setting")}
          text={"Settings"} leftImage={images.setting} />

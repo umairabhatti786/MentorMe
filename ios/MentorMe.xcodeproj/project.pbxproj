@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* MentorMeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MentorMeTests.m */; };
-		045A615C2B486694008178FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 045A615B2B486693008178FB /* GoogleService-Info.plist */; };
 		0E97B2A7DF8D4676A52C5E2C /* SF-Compact-Rounded-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 929A48CE86014E52A0F3ADA7 /* SF-Compact-Rounded-Light.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -72,7 +71,6 @@
 		01C8371478E340B79154E72A /* SF-Compact-Text-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Compact-Text-Medium.ttf"; path = "../assets/fonts/SF-Compact-Text-Medium.ttf"; sourceTree = "<group>"; };
 		0393E03166AA4E1287F9E97E /* SF-Compact-Text-Ultralight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Compact-Text-Ultralight.ttf"; path = "../assets/fonts/SF-Compact-Text-Ultralight.ttf"; sourceTree = "<group>"; };
 		044A92BA2B2AF8060059743B /* MentorMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = MentorMe.entitlements; path = MentorMe/MentorMe.entitlements; sourceTree = "<group>"; };
-		045A615B2B486693008178FB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1299511680E545DFBCAD142A /* SF-Compact-Text-Semibold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Compact-Text-Semibold.ttf"; path = "../assets/fonts/SF-Compact-Text-Semibold.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* MentorMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MentorMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = MentorMe/AppDelegate.h; sourceTree = "<group>"; };
@@ -167,7 +165,6 @@
 			children = (
 				044A92BA2B2AF8060059743B /* MentorMe.entitlements */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
-				045A615B2B486693008178FB /* GoogleService-Info.plist */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
@@ -295,6 +292,7 @@
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
 			name = MentorMeTests;
+			productName = MentorMeTests;
 			productReference = 00E356EE1AD99517003FC87E /* MentorMeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -409,7 +407,6 @@
 				59D0D437130E4FC19CD2E0AC /* SF-Compact-Text-ThinItalic.ttf in Resources */,
 				58A9A7F7B606408E86D90D47 /* SF-Compact-Text-Ultralight.ttf in Resources */,
 				DCBBC31CE6A344DEA7CD3DE4 /* SF-Compact-Text-UltralightItalic.ttf in Resources */,
-				045A615C2B486694008178FB /* GoogleService-Info.plist in Resources */,
 				AC969C2E19A141D7A1C77B78 /* SF-Compact.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -802,7 +799,8 @@
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
-					" ",
+					"-Wl",
+					"-ld_classic",
 					"-Wl -ld_classic ",
 				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
@@ -876,7 +874,8 @@
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
-					" ",
+					"-Wl",
+					"-ld_classic",
 					"-Wl -ld_classic ",
 				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";

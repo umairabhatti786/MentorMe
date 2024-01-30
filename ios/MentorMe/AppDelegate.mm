@@ -1,5 +1,4 @@
 #import "AppDelegate.h"
-#import <Firebase.h>
 
 #import <React/RCTBundleURLProvider.h>
 
@@ -10,9 +9,9 @@
     // [GMSServices provideAPIKey:@"AIzaSyB4IiJ7-RLQuovoGa_sj5HaBNBZ5vPYzT0"];
 
   self.moduleName = @"MentorMe";
-  if ([FIRApp defaultApp] == nil) {
-    [FIRApp configure];
-  }
+  // if ([FIRApp defaultApp] == nil) {
+  //   [FIRApp configure];
+  // }
   // You can add your custom initial props in the dictionary below.
   // They will be passed down to the ViewController used by React Native.
   self.initialProps = @{};
